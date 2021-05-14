@@ -1,5 +1,7 @@
 # Green-Rush
-A full stack eCommerce app built with React, Redux. 
-The back-end Node-Express and Mongo.
-Green Rush app sell paintings and posters.
-Implemented Paypal for secure transactions.
+
+Built a custom A full stack eCommerce platform with React, Redux, Node, Express & MongoDB. 
+An actual real-world project for real customer selling paintings and posters.
+Full featured shopping cart with PayPal & credit/debit payments.
+Admin area to manage customers, products & orders.
+Product rating & review system
