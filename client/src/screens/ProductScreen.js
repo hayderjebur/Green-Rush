@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -68,7 +68,7 @@ const ProductScreen = ({ history, match }) => {
   };
 
   return (
-    <>
+    <Fragment>
       <Link className='btn btn-light my-3' to='/'>
         Go Back
       </Link>
@@ -77,7 +77,7 @@ const ProductScreen = ({ history, match }) => {
       ) : error ? (
         <Message variant='danger'>{error}</Message>
       ) : (
-        <>
+        <Fragment>
           <Meta title={product.name} />
           <Row>
             <Col md={6}>
@@ -225,9 +225,9 @@ const ProductScreen = ({ history, match }) => {
               </ListGroup>
             </Col>
           </Row>
-        </>
+        </Fragment>
       )}
-    </>
+    </Fragment>
   );
 };
 

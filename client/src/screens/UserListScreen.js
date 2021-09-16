@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Table, Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
@@ -33,7 +33,7 @@ const UserListScreen = ({ history }) => {
   };
 
   return (
-    <>
+    <Fragment>
       <h1>Users</h1>
       {loading ? (
         <Loader />
@@ -84,7 +84,7 @@ const UserListScreen = ({ history }) => {
           </tbody>
         </Table>
       )}
-    </>
+    </Fragment>
   );
 };
 

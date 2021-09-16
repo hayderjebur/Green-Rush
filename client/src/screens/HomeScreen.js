@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Row, Col } from 'react-bootstrap';
 import Product from '../components/Product';
@@ -19,7 +19,7 @@ const HomeScreen = ({ match }) => {
   }, [dispatch, keyword, pageNumber]);
 
   return (
-    <>
+    <Fragment>
       <Meta />
       {/* !keyword ? (
         // <ProductCarousel />
@@ -34,7 +34,7 @@ const HomeScreen = ({ match }) => {
       ) : error ? (
         <Message variant='danger'>{error}</Message>
       ) : (
-        <>
+        <Fragment>
           <Col xs lg='2'></Col>
           <Col md='auto'>
             <Row className='justify-content-md-center'>
@@ -47,9 +47,9 @@ const HomeScreen = ({ match }) => {
           </Col>
 
           <Col xs lg='2'></Col>
-        </>
+        </Fragment>
       )}
-    </>
+    </Fragment>
   );
 };
 

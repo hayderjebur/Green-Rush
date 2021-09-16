@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Table, Button, Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
@@ -70,7 +70,7 @@ const ProductListScreen = ({ history, match }) => {
   };
 
   return (
-    <>
+    <Fragment>
       <Row className='align-items-center'>
         <Col>
           <h1>Products</h1>
@@ -90,7 +90,7 @@ const ProductListScreen = ({ history, match }) => {
       ) : error ? (
         <Message variant='danger'>{error}</Message>
       ) : (
-        <>
+        <Fragment>
           <Table striped bordered hover responsive className='table-sm'>
             <thead>
               <tr>
@@ -128,9 +128,9 @@ const ProductListScreen = ({ history, match }) => {
               ))}
             </tbody>
           </Table>
-        </>
+        </Fragment>
       )}
-    </>
+    </Fragment>
   );
 };
 

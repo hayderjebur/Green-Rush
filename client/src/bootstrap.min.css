@@ -44,6 +44,7 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
 }
+
 *,
 *::before,
 *::after {
@@ -9918,4 +9919,19 @@ th {
 .card-title,
 .card-header {
   color: inherit;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* body {
+  overflow: hidden;
+} */
+
+#root,
+.App {
+  height: 100%;
 }

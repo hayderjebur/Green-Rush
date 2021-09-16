@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
@@ -49,7 +49,7 @@ const UserEditScreen = ({ match, history }) => {
   };
 
   return (
-    <>
+    <Fragment>
       <Link to='/admin/userlist' className='btn btn-light my-3'>
         Go Back
       </Link>
@@ -98,7 +98,7 @@ const UserEditScreen = ({ match, history }) => {
           </Form>
         )}
       </FormContainer>
-    </>
+    </Fragment>
   );
 };
 
